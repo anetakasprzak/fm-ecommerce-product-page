@@ -28,13 +28,15 @@ export const ThumbnailImg = styled.img`
 
 export const MainImgContainer = styled.div`
   position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Left = styled.button`
   position: absolute;
-  top: 50%;
   left: -5%;
-  transform: translateY(-50%, -50%);
 
   border: none;
   width: 5.6rem;
@@ -47,9 +49,7 @@ export const Left = styled.button`
 
 export const Right = styled.button`
   position: absolute;
-  top: 50%;
   right: -5%;
-  transform: translateY(-50%, -50%);
 
   border: none;
   width: 5.6rem;
