@@ -1,3 +1,14 @@
+import { useState } from "react";
+import {
+  Container,
+  MainImg,
+  ThumbnailImg,
+  ThumbnailWrapper,
+  MainImgContainer,
+  Left,
+  Right,
+} from "./Slider";
+
 const data = [
   {
     id: 1,
@@ -22,11 +33,43 @@ const data = [
 ];
 
 function Slider() {
+  const [index, setIndex] = useState(0);
+
   return (
-    <div>
-      <p>Slider</p>
-      <img src={data[0].image} alt="Test" />
-    </div>
+    <Container>
+      <MainImgContainer>
+        <Left>
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11 1 3 9l8 8"
+              stroke="#1D2026"
+              strokeWidth="3"
+              fill="none"
+              fillRule="evenodd"
+            />
+          </svg>
+        </Left>
+        <MainImg src={data[index].image} alt="Shoes image" />
+        <Right>
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m2 1 8 8-8 8"
+              stroke="#1D2026"
+              strokeWidth="3"
+              fill="none"
+              fillRule="evenodd"
+            />
+          </svg>
+        </Right>
+      </MainImgContainer>
+      <ThumbnailWrapper>
+        {data?.map((item) => (
+          <div key={item.id}>
+            <ThumbnailImg src={item.thumbnail} alt="shoes thumbnail" />
+          </div>
+        ))}
+      </ThumbnailWrapper>
+    </Container>
   );
 }
 
