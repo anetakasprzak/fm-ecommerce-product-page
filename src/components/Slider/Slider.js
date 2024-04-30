@@ -24,6 +24,18 @@ export const MainImg = styled.img`
 export const ThumbnailImg = styled.img`
   border-radius: 1rem;
   max-width: 8.8rem;
+
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 40%;
+    border: 2.5px solid #ff7e1b;
+  }
 `;
 
 export const MainImgContainer = styled.div`
@@ -45,6 +57,14 @@ export const Left = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &:hover {
+    background-color: #fff;
+    border: 2.5px solid #ff7e1b;
+  }
 `;
 
 export const Right = styled.button`
@@ -58,4 +78,12 @@ export const Right = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &:hover {
+    background-color: #fff;
+    border: 2.5px solid #ff7e1b;
+  }
 `;
