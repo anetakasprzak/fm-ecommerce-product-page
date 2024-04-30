@@ -1,12 +1,13 @@
+import { Wrapper } from "./App.js";
 import Navigation from "./components/Navigation/Navigation.jsx";
 import Slider from "./components/Slider/Slider.jsx";
 
 function App() {
   return (
-    <div>
+    <Wrapper>
       <Navigation />
       <Slider />
-    </div>
+    </Wrapper>
   );
 }
 
