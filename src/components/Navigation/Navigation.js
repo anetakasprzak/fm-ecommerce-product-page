@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.nav`
   display: flex;
   justify-content: space-between;
-  color: ${(props) => (props.isOpen ? "green" : "blue")};
 `;
 
 export const Logo = styled.img``;
@@ -19,3 +18,7 @@ export const Item = styled.li`
     text-decoration: none;
   }
 `;
+
+export const Cart = styled.img``;
+
+export const Avatar = styled.img``;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Logo, Menu, Item } from "./Navigation";
+import { Container, Logo, Menu, Item, Cart, Avatar } from "./Navigation";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(true);
@@ -24,6 +24,8 @@ function Navigation() {
           <a href="#">Contact</a>
         </Item>
       </Menu>
+      <Cart src="./images/icon-cart.svg" alt="cart icon" />
+      <Avatar src="./images/image-avatar.png" alt="avatar" />
     </Container>
   );
 }
