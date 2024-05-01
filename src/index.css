@@ -15,10 +15,12 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  color: #69707d;
 }
 
 body {
   font-size: 1.6rem;
+  font-weight: 400;
 }
 
 img,
