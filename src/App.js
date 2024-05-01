@@ -7,5 +7,5 @@ export const Wrapper = styled.div`
   margin-top: 2rem;
 
   //TEMPORARY!!!
-  background-color: beige;
+  /* background-color: beige; */
 `;

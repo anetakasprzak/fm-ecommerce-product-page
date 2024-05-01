@@ -5,7 +5,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 3.2rem;
-  max-width: 55rem;
+
+  max-width: ${(props) => (props.isInModal ? "55rem" : "44.5rem")};
 
   //TEMPORARY !!!
   margin-top: 3rem;
@@ -19,10 +20,11 @@ export const ThumbnailWrapper = styled.div`
 
 export const MainImg = styled.img`
   border-radius: 1.5rem;
+  cursor: pointer;
 `;
 
 export const ThumbnailContainer = styled.div`
-  border: ${(props) => (props.isActive ? "2.5px solid #ff7e1b" : "")};
+  border: ${(props) => (props.isActive ? "2px solid #ff7e1b" : "")};
   border-radius: 1rem;
   overflow: hidden;
   max-width: 8.8rem;
@@ -30,7 +32,7 @@ export const ThumbnailContainer = styled.div`
 `;
 
 export const ThumbnailImg = styled.img`
-  opacity: ${(props) => (props.isActive ? "0.4" : "")};
+  opacity: ${(props) => (props.isActive ? "0.6" : "")};
 
   cursor: pointer;
   transition: all 0.1s;

@@ -33,7 +33,7 @@ const data = [
   },
 ];
 
-function Slider() {
+function Slider({ isInModal, setIsModalOpen }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const checkNumber = (newIndex) => {
@@ -62,31 +62,41 @@ function Slider() {
   };
 
   return (
-    <Container>
+    <Container isInModal={isInModal}>
       <MainImgContainer>
-        <Left onClick={prevImage}>
-          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M11 1 3 9l8 8"
-              stroke="#1D2026"
-              strokeWidth="3"
-              fill="none"
-              fillRule="evenodd"
-            />
-          </svg>
-        </Left>
-        <MainImg src={data[currentIndex].image} alt="Shoes image" />
-        <Right onClick={nextImage}>
-          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m2 1 8 8-8 8"
-              stroke="#1D2026"
-              strokeWidth="3"
-              fill="none"
-              fillRule="evenodd"
-            />
-          </svg>
-        </Right>
+        {isInModal && (
+          <Left onClick={prevImage}>
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 1 3 9l8 8"
+                stroke="#1D2026"
+                strokeWidth="3"
+                fill="none"
+                fillRule="evenodd"
+              />
+            </svg>
+          </Left>
+        )}
+
+        <MainImg
+          src={data[currentIndex].image}
+          alt="Shoes image"
+          onClick={() => setIsModalOpen(true)}
+        />
+
+        {isInModal && (
+          <Right onClick={nextImage}>
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m2 1 8 8-8 8"
+                stroke="#1D2026"
+                strokeWidth="3"
+                fill="none"
+                fillRule="evenodd"
+              />
+            </svg>
+          </Right>
+        )}
       </MainImgContainer>
       <ThumbnailWrapper>
         {data?.map((item) => (
