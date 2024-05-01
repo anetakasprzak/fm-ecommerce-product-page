@@ -49,12 +49,12 @@ export const Cart = styled.img`
 
 export const Notification = styled.span`
   position: absolute;
-  top: 1rem;
+  top: 0.8rem;
   right: 8.9rem;
   font-size: 1rem;
   line-height: 1;
   font-weight: 700;
-  padding: 0.1rem 0.6rem;
+  padding: 0.2rem 0.7rem;
   border-radius: 6.5px;
   color: #fff;
   background-color: #ff7e1b;

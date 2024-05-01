@@ -6,6 +6,9 @@ export const Container = styled.div`
   align-items: center;
   gap: 3.2rem;
   max-width: 55rem;
+
+  //TEMPORARY !!!
+  margin-top: 3rem;
 `;
 
 export const ThumbnailWrapper = styled.div`
