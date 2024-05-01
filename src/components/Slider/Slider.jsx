@@ -36,10 +36,35 @@ const data = [
 function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const checkNumber = (newIndex) => {
+    if (newIndex > data.length - 1) {
+      return 0;
+    }
+    if (newIndex < 0) {
+      return data.length - 1;
+    }
+
+    return newIndex;
+  };
+
+  const nextImage = () => {
+    setCurrentIndex((currentIndex) => {
+      const newIndex = currentIndex + 1;
+      return checkNumber(newIndex);
+    });
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((currentIndex) => {
+      const newIndex = currentIndex - 1;
+      return checkNumber(newIndex);
+    });
+  };
+
   return (
     <Container>
       <MainImgContainer>
-        <Left>
+        <Left onClick={prevImage}>
           <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M11 1 3 9l8 8"
@@ -51,7 +76,7 @@ function Slider() {
           </svg>
         </Left>
         <MainImg src={data[currentIndex].image} alt="Shoes image" />
-        <Right>
+        <Right onClick={nextImage}>
           <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
             <path
               d="m2 1 8 8-8 8"
