@@ -21,9 +21,16 @@ export const MainImg = styled.img`
   border-radius: 1.5rem;
 `;
 
-export const ThumbnailImg = styled.img`
+export const ThumbnailContainer = styled.div`
+  border: ${(props) => (props.isActive ? "2.5px solid #ff7e1b" : "")};
   border-radius: 1rem;
+  overflow: hidden;
   max-width: 8.8rem;
+  cursor: pointer;
+`;
+
+export const ThumbnailImg = styled.img`
+  opacity: ${(props) => (props.isActive ? "0.4" : "")};
 
   cursor: pointer;
   transition: all 0.1s;

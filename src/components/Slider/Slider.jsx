@@ -7,33 +7,34 @@ import {
   MainImgContainer,
   Left,
   Right,
+  ThumbnailContainer,
 } from "./Slider";
 
 const data = [
   {
-    id: 1,
+    id: 0,
     thumbnail: "./images/image-product-1-thumbnail.jpg",
     image: "./images/image-product-1.jpg",
   },
   {
-    id: 2,
+    id: 1,
     thumbnail: "./images/image-product-2-thumbnail.jpg",
     image: "./images/image-product-2.jpg",
   },
   {
-    id: 3,
+    id: 2,
     thumbnail: "./images/image-product-3-thumbnail.jpg",
     image: "./images/image-product-3.jpg",
   },
   {
-    id: 4,
+    id: 3,
     thumbnail: "./images/image-product-4-thumbnail.jpg",
     image: "./images/image-product-4.jpg",
   },
 ];
 
 function Slider() {
-  const [index, setIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
     <Container>
@@ -49,7 +50,7 @@ function Slider() {
             />
           </svg>
         </Left>
-        <MainImg src={data[index].image} alt="Shoes image" />
+        <MainImg src={data[currentIndex].image} alt="Shoes image" />
         <Right>
           <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -64,9 +65,17 @@ function Slider() {
       </MainImgContainer>
       <ThumbnailWrapper>
         {data?.map((item) => (
-          <div key={item.id}>
-            <ThumbnailImg src={item.thumbnail} alt="shoes thumbnail" />
-          </div>
+          <ThumbnailContainer
+            key={item.id}
+            isActive={currentIndex === item.id}
+            onClick={() => setCurrentIndex(item.id)}
+          >
+            <ThumbnailImg
+              src={item.thumbnail}
+              alt="shoes thumbnail"
+              isActive={currentIndex === item.id}
+            />
+          </ThumbnailContainer>
         ))}
       </ThumbnailWrapper>
     </Container>
