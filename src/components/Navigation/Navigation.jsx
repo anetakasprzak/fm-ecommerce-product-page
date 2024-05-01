@@ -8,6 +8,7 @@ import {
   Avatar,
   IconsBox,
   LogoMenuBox,
+  Notification,
 } from "./Navigation";
 
 function Navigation() {
@@ -37,6 +38,7 @@ function Navigation() {
       </LogoMenuBox>
       <IconsBox>
         <Cart src="./images/icon-cart.svg" alt="cart icon" />
+        <Notification>3</Notification>
         <Avatar src="./images/image-avatar.png" alt="avatar" />
       </IconsBox>
     </Container>

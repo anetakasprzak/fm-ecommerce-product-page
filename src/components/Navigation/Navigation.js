@@ -40,10 +40,24 @@ export const IconsBox = styled.div`
   display: flex;
   align-items: center;
   gap: 4.5rem;
+  position: relative;
 `;
 
 export const Cart = styled.img`
   cursor: pointer;
+`;
+
+export const Notification = styled.span`
+  position: absolute;
+  top: 1rem;
+  right: 8.9rem;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 700;
+  padding: 0.1rem 0.6rem;
+  border-radius: 6.5px;
+  color: #fff;
+  background-color: #ff7e1b;
 `;
 
 export const Avatar = styled.img`
