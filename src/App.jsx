@@ -12,7 +12,7 @@ function App() {
       <Navigation />
       <Slider isInModal={false} setIsModalOpen={setIsModalOpen} />
       {isModalOpen && (
-        <Modal>
+        <Modal setIsModalOpen={setIsModalOpen}>
           <Slider isInModal />
         </Modal>
       )}

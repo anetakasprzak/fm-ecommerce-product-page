@@ -18,3 +18,22 @@ export const Content = styled.div`
   transform: translate(-50%, -50%);
   z-index: 10;
 `;
+
+export const CloseModal = styled.button`
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  position: absolute;
+  top: -1rem;
+  right: 0;
+
+  svg {
+    fill: white;
+    transition: all 0.2s;
+  }
+
+  svg:hover {
+    fill: #ff7e1b;
+  }
+`;

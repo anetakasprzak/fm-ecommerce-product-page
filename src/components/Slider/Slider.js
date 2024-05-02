@@ -5,7 +5,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 3.2rem;
-  position: relative;
 
   max-width: ${(props) => (props.isInModal ? "55rem" : "44.5rem")};
 
@@ -96,14 +95,4 @@ export const Right = styled.button`
     background-color: #fff;
     border: 2.5px solid #ff7e1b;
   }
-`;
-
-export const CloseModal = styled.button`
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-
-  position: absolute;
-  top: -3.2rem;
-  right: 0;
 `;
