@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Container,
   Subheading,
@@ -17,6 +18,17 @@ import {
 } from "./ProductDetails";
 
 function ProductDetails() {
+  const [quantity, setQuantity] = useState(1);
+
+  const lessQuantity = () => {
+    if (quantity === 0) return;
+    setQuantity((quantity) => quantity - 1);
+  };
+
+  const moreQuantity = () => {
+    setQuantity((quantity) => quantity + 1);
+  };
+
   return (
     <Container>
       <Subheading>Sneaker Company</Subheading>
@@ -36,11 +48,11 @@ function ProductDetails() {
 
       <AddToCartBox>
         <QuantityBox>
-          <ButtonLess>
+          <ButtonLess onClick={lessQuantity}>
             <img src="../../../public/images/icon-minus.svg" />
           </ButtonLess>
-          <Quantity>0</Quantity>
-          <ButtonMore>
+          <Quantity>{quantity}</Quantity>
+          <ButtonMore onClick={moreQuantity}>
             <img src="../../../public/images/icon-plus.svg" />
           </ButtonMore>
         </QuantityBox>

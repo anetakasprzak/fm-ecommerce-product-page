@@ -67,6 +67,8 @@ export const AddToCartBox = styled.div`
 export const QuantityBox = styled.div`
   display: flex;
   align-items: center;
+  width: 17rem;
+
   gap: 4.5rem;
   background-color: #f6f8fd;
   border-radius: 1rem;
@@ -76,6 +78,12 @@ export const QuantityBox = styled.div`
 export const ButtonLess = styled.button`
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
 `;
 
 export const Quantity = styled.p`
@@ -86,6 +94,12 @@ export const Quantity = styled.p`
 export const ButtonMore = styled.button`
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
 `;
 
 export const ButtonAdd = styled.button`
@@ -97,9 +111,19 @@ export const ButtonAdd = styled.button`
   box-shadow: 0rem 2rem 5rem -2.5rem #ff7e1b;
   border: none;
   padding: 2rem 7.6rem;
+  cursor: pointer;
+  transition: all 0.3s;
 
   span {
     color: #fff;
     font-weight: 700;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    transform: translateY(0.5rem);
   }
 `;
