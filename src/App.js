@@ -9,5 +9,7 @@ export const Wrapper = styled.div`
 
 export const MainContainer = styled.main`
   display: flex;
-  gap: 5rem;
+  align-items: center;
+  gap: 12.5rem;
+  padding: 7rem 3rem 3rem 3rem;
 `;
