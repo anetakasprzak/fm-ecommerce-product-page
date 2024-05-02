@@ -7,6 +7,7 @@ import {
   IconsBox,
   LogoMenuBox,
   Notification,
+  Hamburger,
 } from "./Navigation";
 import Cart from "../Cart/Cart.jsx";
 
@@ -14,6 +15,9 @@ function Navigation({ quantity, setQuantity }) {
   return (
     <Container>
       <LogoMenuBox>
+        <Hamburger>
+          <img src="../../../public/images/icon-menu.svg" />
+        </Hamburger>
         <Logo src="./images/logo.svg" alt="Logo" />
         <Menu>
           <Item>

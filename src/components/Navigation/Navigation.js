@@ -8,10 +8,23 @@ export const Container = styled.nav`
   border-bottom: 1px solid #e4e9f2;
 `;
 
+export const Hamburger = styled.div`
+  display: none;
+  cursor: pointer;
+
+  @media screen and (max-width: 52.5em) {
+    display: block;
+  }
+`;
+
 export const LogoMenuBox = styled.div`
   display: flex;
   align-items: center;
   gap: 5.6rem;
+
+  @media screen and (max-width: 52.5em) {
+    gap: 3rem;
+  }
 `;
 
 export const Logo = styled.img``;
@@ -20,6 +33,10 @@ export const Menu = styled.ul`
   list-style: none;
   display: flex;
   gap: 3.2rem;
+
+  @media screen and (max-width: 52.5em) {
+    display: none;
+  }
 `;
 
 export const Item = styled.li`
