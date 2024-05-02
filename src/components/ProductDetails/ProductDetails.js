@@ -4,6 +4,21 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2.8rem;
+
+  @media screen and (max-width: 64em) {
+    max-width: 40rem;
+  }
+
+  @media screen and (max-width: 54em) {
+    max-width: 38rem;
+    gap: 2.4rem;
+  }
+
+  @media screen and (max-width: 52em) {
+    max-width: 50rem;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const Subheading = styled.h4`
@@ -20,6 +35,29 @@ export const Heading = styled.h1`
   line-height: 4.8rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
+
+  @media screen and (max-width: 64em) {
+    font-size: 4rem;
+    line-height: 4.2rem;
+  }
+
+  @media screen and (max-width: 54em) {
+    font-size: 3.8rem;
+    line-height: 4rem;
+    margin-bottom: 0rem;
+  }
+
+  @media screen and (max-width: 52em) {
+    font-size: 4.2rem;
+    line-height: 4.4rem;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 30em) {
+    font-size: 3.6rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ProductDescription = styled.p`
@@ -62,6 +100,10 @@ export const OldPrice = styled.span`
 export const AddToCartBox = styled.div`
   display: flex;
   gap: 1.6rem;
+
+  @media screen and (max-width: 27.8em) {
+    flex-direction: column;
+  }
 `;
 
 export const QuantityBox = styled.div`
@@ -74,6 +116,22 @@ export const QuantityBox = styled.div`
   background-color: #f6f8fd;
   border-radius: 1rem;
   padding: 0 2rem;
+
+  @media screen and (max-width: 64em) {
+    width: 15rem;
+    gap: 3.7rem;
+  }
+
+  @media screen and (max-width: 52em) {
+    width: 17rem;
+  }
+
+  @media screen and (max-width: 27.8em) {
+    width: 100%;
+    justify-content: center;
+    padding: 2rem;
+    gap: 4.6rem;
+  }
 `;
 
 export const ButtonLess = styled.button`
@@ -112,6 +170,7 @@ export const ButtonAdd = styled.button`
   box-shadow: 0rem 2rem 5rem -2.5rem #ff7e1b;
   border: none;
   padding: 2rem 7.6rem;
+  text-wrap: nowrap;
   cursor: pointer;
   transition: all 0.3s;
 
@@ -126,5 +185,17 @@ export const ButtonAdd = styled.button`
 
   &:active {
     transform: translateY(0.5rem);
+  }
+
+  @media screen and (max-width: 64em) {
+    padding: 2rem 5rem;
+  }
+
+  @media screen and (max-width: 52em) {
+    padding: 2rem 6.4rem;
+  }
+
+  @media screen and (max-width: 27.8em) {
+    padding: 2rem 7.8rem;
   }
 `;

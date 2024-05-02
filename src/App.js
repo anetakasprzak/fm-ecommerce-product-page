@@ -14,6 +14,25 @@ export const Wrapper = styled.div`
 export const MainContainer = styled.main`
   display: flex;
   align-items: center;
+
   gap: 12.5rem;
-  padding: 7rem 3rem 3rem 3rem;
+  padding: 7rem 0rem 3rem 3rem;
+
+  @media screen and (max-width: 64em) {
+    padding: 5rem 0rem 3rem 3rem;
+    gap: 10rem;
+  }
+
+  @media screen and (max-width: 56.25em) {
+    gap: 8rem;
+  }
+
+  @media screen and (max-width: 52em) {
+    flex-direction: column;
+    padding: 7rem 2rem 3rem 2rem;
+  }
+
+  @media screen and (max-width: 30em) {
+    padding: 3rem 2rem 3rem 2rem;
+  }
 `;
