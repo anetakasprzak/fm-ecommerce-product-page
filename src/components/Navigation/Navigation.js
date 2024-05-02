@@ -43,21 +43,6 @@ export const IconsBox = styled.div`
   position: relative;
 `;
 
-export const Cart = styled.button`
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-
-  svg {
-    fill: #69707d;
-    transition: all 0.2s;
-  }
-
-  svg:hover {
-    fill: #1d2026;
-  }
-`;
-
 export const Notification = styled.span`
   position: absolute;
   top: 0.8rem;
