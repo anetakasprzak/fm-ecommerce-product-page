@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Wrapper } from "./App.js";
+import { MainContainer, Wrapper } from "./App.js";
 import Navigation from "./components/Navigation/Navigation.jsx";
 import Slider from "./components/Slider/Slider.jsx";
 import Modal from "./components/Modal/Modal.jsx";
+import ProductDetails from "./components/ProductDetails/ProductDetails.jsx";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,7 +11,11 @@ function App() {
   return (
     <Wrapper>
       <Navigation />
-      <Slider isInModal={false} setIsModalOpen={setIsModalOpen} />
+      <MainContainer>
+        <Slider isInModal={false} setIsModalOpen={setIsModalOpen} />
+
+        <ProductDetails />
+      </MainContainer>
       {isModalOpen && (
         <Modal setIsModalOpen={setIsModalOpen}>
           <Slider isInModal />

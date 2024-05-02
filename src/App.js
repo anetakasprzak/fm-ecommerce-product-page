@@ -5,7 +5,9 @@ export const Wrapper = styled.div`
   color: #69707d;
   margin: 0 auto;
   margin-top: 2rem;
+`;
 
-  //TEMPORARY!!!
-  /* background-color: beige; */
+export const MainContainer = styled.main`
+  display: flex;
+  gap: 5rem;
 `;
