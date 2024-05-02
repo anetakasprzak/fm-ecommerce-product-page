@@ -19,9 +19,13 @@ import {
 function Cart({ quantity, setQuantity }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const calculateSum = (quantity) => {
-    const sum = quantity * 125;
-    return sum;
+  const calculateSum = (nrOfItems) => {
+    const sum = nrOfItems * 125;
+
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(sum);
   };
 
   return (
@@ -57,7 +61,7 @@ function Cart({ quantity, setQuantity }) {
                   <Description>Fall Limited Edition Sneakers</Description>
                   <PriceBox>
                     <Price>$125.00</Price> x <Quantity>{quantity}</Quantity>
-                    <Sum>$375.00</Sum>
+                    <Sum>{calculateSum(quantity)}</Sum>
                   </PriceBox>
                 </TextBox>
                 <DeleteIcon onClick={() => setQuantity(0)}>

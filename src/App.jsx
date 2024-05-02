@@ -8,7 +8,7 @@ import ProductDetails from "./components/ProductDetails/ProductDetails.jsx";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
 
   return (
     <Wrapper>
@@ -16,7 +16,7 @@ function App() {
       <MainContainer>
         <Slider isInModal={false} setIsModalOpen={setIsModalOpen} />
 
-        <ProductDetails quantity={quantity} setQuantity={setQuantity} />
+        <ProductDetails setQuantity={setQuantity} />
       </MainContainer>
       {isModalOpen && (
         <Modal setIsModalOpen={setIsModalOpen}>

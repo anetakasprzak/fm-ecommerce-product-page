@@ -17,15 +17,19 @@ import {
   ButtonAdd,
 } from "./ProductDetails";
 
-function ProductDetails({ setQuantity, quantity }) {
+function ProductDetails({ setQuantity }) {
+  const [itemsNumber, setItemsNumber] = useState(0);
+
   const lessQuantity = () => {
-    if (quantity === 0) return;
-    setQuantity((quantity) => quantity - 1);
+    if (itemsNumber === 0) return;
+    setItemsNumber((itemsNumber) => itemsNumber - 1);
   };
 
   const moreQuantity = () => {
-    setQuantity((quantity) => quantity + 1);
+    setItemsNumber((itemsNumber) => itemsNumber + 1);
   };
+
+  console.log({ itemsNumber });
 
   return (
     <Container>
@@ -49,12 +53,12 @@ function ProductDetails({ setQuantity, quantity }) {
           <ButtonLess onClick={lessQuantity}>
             <img src="../../../public/images/icon-minus.svg" />
           </ButtonLess>
-          <Quantity>{quantity}</Quantity>
+          <Quantity>{itemsNumber}</Quantity>
           <ButtonMore onClick={moreQuantity}>
             <img src="../../../public/images/icon-plus.svg" />
           </ButtonMore>
         </QuantityBox>
-        <ButtonAdd>
+        <ButtonAdd onClick={() => setQuantity(itemsNumber)}>
           <svg
             width="18"
             height="16"
