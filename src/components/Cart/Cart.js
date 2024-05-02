@@ -37,6 +37,7 @@ export const Heading = styled.h4`
 
 export const ItemBox = styled.div`
   padding-top: 2.4rem;
+  margin-bottom: 2.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,13 +56,18 @@ export const Description = styled.p``;
 
 export const PriceBox = styled.p`
   display: flex;
+  gap: 0.4rem;
 `;
 
 export const Price = styled.p``;
 
 export const Quantity = styled.p``;
 
-export const Sum = styled.p``;
+export const Sum = styled.p`
+  color: #1d2026;
+  font-weight: 700;
+  margin-left: 0.6rem;
+`;
 
 export const DeleteIcon = styled.div`
   svg {
@@ -77,4 +83,23 @@ export const DeleteIcon = styled.div`
 
 export const Button = styled.button`
   border: none;
+  width: 100%;
+  color: #fff;
+  padding: 2.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #ff7e1b;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+`;
+
+export const EmptyCart = styled.p`
+  display: grid;
+  justify-content: center;
+  margin-top: 7rem;
 `;

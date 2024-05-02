@@ -10,7 +10,7 @@ import {
 } from "./Navigation";
 import Cart from "../Cart/Cart.jsx";
 
-function Navigation() {
+function Navigation({ quantity, setQuantity }) {
   return (
     <Container>
       <LogoMenuBox>
@@ -34,8 +34,8 @@ function Navigation() {
         </Menu>
       </LogoMenuBox>
       <IconsBox>
-        <Cart />
-        <Notification>3</Notification>
+        <Cart quantity={quantity} setQuantity={setQuantity} />
+        {quantity >= 1 && <Notification>{quantity}</Notification>}
         <Avatar src="./images/image-avatar.png" alt="avatar" />
       </IconsBox>
     </Container>

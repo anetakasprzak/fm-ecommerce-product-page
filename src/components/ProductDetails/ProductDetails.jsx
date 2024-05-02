@@ -17,9 +17,7 @@ import {
   ButtonAdd,
 } from "./ProductDetails";
 
-function ProductDetails() {
-  const [quantity, setQuantity] = useState(1);
-
+function ProductDetails({ setQuantity, quantity }) {
   const lessQuantity = () => {
     if (quantity === 0) return;
     setQuantity((quantity) => quantity - 1);

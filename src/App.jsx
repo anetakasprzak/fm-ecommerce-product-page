@@ -8,13 +8,15 @@ import ProductDetails from "./components/ProductDetails/ProductDetails.jsx";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <Wrapper>
-      <Navigation />
+      <Navigation quantity={quantity} setQuantity={setQuantity} />
       <MainContainer>
         <Slider isInModal={false} setIsModalOpen={setIsModalOpen} />
 
-        <ProductDetails />
+        <ProductDetails quantity={quantity} setQuantity={setQuantity} />
       </MainContainer>
       {isModalOpen && (
         <Modal setIsModalOpen={setIsModalOpen}>

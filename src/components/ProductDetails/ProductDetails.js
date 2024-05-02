@@ -68,6 +68,7 @@ export const QuantityBox = styled.div`
   display: flex;
   align-items: center;
   width: 17rem;
+  box-shadow: 0rem 2rem 5rem -2.5rem grey;
 
   gap: 4.5rem;
   background-color: #f6f8fd;
