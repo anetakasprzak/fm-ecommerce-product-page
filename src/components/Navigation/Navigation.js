@@ -6,6 +6,7 @@ export const Container = styled.nav`
   justify-content: space-between;
   padding-bottom: 2.8rem;
   border-bottom: 1px solid #e4e9f2;
+  position: relative;
 
   @media screen and (max-width: 30em) {
     padding: 1rem 1rem;
@@ -103,4 +104,17 @@ export const Avatar = styled.img`
   &:hover {
     border: 2px solid #ff7e1b;
   }
+`;
+
+export const Menu2 = styled.div`
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100vh;
+  z-index: 99;
+  transform: ${(props) =>
+    props.isVisible ? "translateX(0px)" : "translateX(-429px)"};
+  transition: all 0.2s;
 `;
