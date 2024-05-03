@@ -27,6 +27,20 @@ export const CartBox = styled.div`
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.5);
+
+  @media screen and (max-width: 75em) {
+    right: -1rem;
+  }
+
+  @media screen and (max-width: 27.8em) {
+    width: 90vw;
+    right: 0.1rem;
+    top: 9rem;
+  }
+
+  @media screen and (max-width: 23.15em) {
+    right: -0.25rem;
+  }
 `;
 
 export const Heading = styled.h4`
@@ -51,13 +65,27 @@ export const Image = styled.div`
   }
 `;
 
-export const TextBox = styled.div``;
+export const TextBox = styled.div`
+  @media screen and (max-width: 25.6em) {
+    margin-left: 0.5rem;
+  }
+`;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+  @media screen and (max-width: 25.6em) {
+    max-width: 17rem;
+    margin-bottom: 0.6rem;
+    margin-left: 0.5rem;
+  }
+`;
 
 export const PriceBox = styled.p`
   display: flex;
   gap: 0.4rem;
+
+  @media screen and (max-width: 25.6em) {
+    margin-left: 0.5rem;
+  }
 `;
 
 export const Price = styled.p``;

@@ -50,6 +50,13 @@ export const MainImgContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 27.8em) {
+    img {
+      height: 32rem;
+      width: 100vw;
+    }
+  }
 `;
 
 export const Left = styled.button`
