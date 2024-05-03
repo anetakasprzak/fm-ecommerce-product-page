@@ -10,6 +10,7 @@ import {
   Hamburger,
   SideMenu,
   CloseMenuBtn,
+  Overlay,
 } from "./Navigation";
 import Cart from "../Cart/Cart.jsx";
 import { useState } from "react";
@@ -47,6 +48,7 @@ function Navigation({ quantity, setQuantity }) {
         {quantity >= 1 && <Notification>{quantity}</Notification>}
         <Avatar src="./images/image-avatar.png" alt="avatar" />
       </IconsBox>
+
       <SideMenu isVisible={isVisible}>
         <CloseMenuBtn onClick={() => setIsVisible(false)}>
           <svg
@@ -80,6 +82,7 @@ function Navigation({ quantity, setQuantity }) {
           <a href="#">Contact</a>
         </Item>
       </SideMenu>
+      <Overlay isVisible={isVisible} />
     </Container>
   );
 }

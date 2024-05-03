@@ -105,17 +105,61 @@ export const Avatar = styled.img`
   }
 `;
 
-export const SideMenu = styled.div`
-  background-color: red;
+export const SideMenu = styled.ul`
+  background-color: #fff;
+  padding: 4rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
   position: absolute;
   top: 0;
   left: 0;
-  width: 400px;
+  width: 50vw;
   height: 100vh;
-  z-index: 99;
+  z-index: 6;
   transform: ${(props) =>
     props.isVisible ? "translateX(0px)" : "translateX(-429px)"};
-  transition: all 0.2s;
+  transition: all 0.2s ease-out;
+
+  li {
+    font-size: 2.2rem;
+    color: #1d2026;
+    font-weight: 700;
+    line-height: 2.6rem;
+  }
+
+  @media screen and (max-width: 30em) {
+    padding: 2.5rem 3rem;
+    width: 60vw;
+
+    li {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 24em) {
+    width: 65vw;
+
+    li {
+      font-size: 1.8rem;
+    }
+  }
 `;
 
-export const CloseMenuBtn = styled.div``;
+export const CloseMenuBtn = styled.div`
+  margin-bottom: 2rem;
+`;
+
+export const Overlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+
+  display: ${(props) => (props.isVisible ? "block" : "none")};
+`;
