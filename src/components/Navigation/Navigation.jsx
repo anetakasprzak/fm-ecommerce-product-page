@@ -8,7 +8,8 @@ import {
   LogoMenuBox,
   Notification,
   Hamburger,
-  Menu2,
+  SideMenu,
+  CloseMenuBtn,
 } from "./Navigation";
 import Cart from "../Cart/Cart.jsx";
 import { useState } from "react";
@@ -46,7 +47,23 @@ function Navigation({ quantity, setQuantity }) {
         {quantity >= 1 && <Notification>{quantity}</Notification>}
         <Avatar src="./images/image-avatar.png" alt="avatar" />
       </IconsBox>
-      <Menu2 isVisible={isVisible}>
+      <SideMenu isVisible={isVisible}>
+        <CloseMenuBtn onClick={() => setIsVisible(false)}>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M20 2.85714L17.1429 0L10 7.14286L2.85714 0L0 2.85714L7.14286 10L0 17.1429L2.85714 20L10 12.8571L17.1429 20L20 17.1429L12.8571 10L20 2.85714Z"
+              fill="#69707D"
+            />
+          </svg>
+        </CloseMenuBtn>
         <Item>
           <a href="#">Collections</a>
         </Item>
@@ -62,7 +79,7 @@ function Navigation({ quantity, setQuantity }) {
         <Item>
           <a href="#">Contact</a>
         </Item>
-      </Menu2>
+      </SideMenu>
     </Container>
   );
 }

@@ -6,7 +6,6 @@ export const Container = styled.nav`
   justify-content: space-between;
   padding-bottom: 2.8rem;
   border-bottom: 1px solid #e4e9f2;
-  position: relative;
 
   @media screen and (max-width: 30em) {
     padding: 1rem 1rem;
@@ -106,7 +105,7 @@ export const Avatar = styled.img`
   }
 `;
 
-export const Menu2 = styled.div`
+export const SideMenu = styled.div`
   background-color: red;
   position: absolute;
   top: 0;
@@ -118,3 +117,5 @@ export const Menu2 = styled.div`
     props.isVisible ? "translateX(0px)" : "translateX(-429px)"};
   transition: all 0.2s;
 `;
+
+export const CloseMenuBtn = styled.div``;
