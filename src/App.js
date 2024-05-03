@@ -39,4 +39,8 @@ export const MainContainer = styled.main`
   @media screen and (max-width: 30em) {
     padding: 2rem 0rem 3rem 0rem;
   }
+
+  @media screen and (max-width: 25.6em) {
+    gap: 5rem;
+  }
 `;

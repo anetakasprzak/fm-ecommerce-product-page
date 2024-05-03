@@ -58,10 +58,19 @@ export const Heading = styled.h1`
     line-height: 4rem;
     margin-bottom: 1rem;
   }
+
+  @media screen and (max-width: 25.6em) {
+    font-size: 3.4rem;
+    margin-bottom: 0.3rem;
+  }
 `;
 
 export const ProductDescription = styled.p`
   line-height: 2.6rem;
+
+  @media screen and (max-width: 25.6em) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const PriceBox = styled.div`
@@ -130,7 +139,7 @@ export const QuantityBox = styled.div`
     width: 100%;
     justify-content: center;
     padding: 2rem;
-    gap: 4.6rem;
+    gap: 6rem;
   }
 `;
 

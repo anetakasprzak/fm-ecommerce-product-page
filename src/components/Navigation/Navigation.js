@@ -87,6 +87,10 @@ export const Notification = styled.span`
   border-radius: 6.5px;
   color: #fff;
   background-color: #ff7e1b;
+
+  @media screen and (max-width: 25.6em) {
+    right: 6.5rem;
+  }
 `;
 
 export const Avatar = styled.img`
