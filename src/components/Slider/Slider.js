@@ -7,9 +7,6 @@ export const Container = styled.div`
   gap: 3.2rem;
 
   max-width: ${(props) => (props.isInModal ? "55rem" : "44.5rem")};
-
-  //TEMPORARY !!!
-  margin-top: 3rem;
 `;
 
 export const ThumbnailWrapper = styled.div`

@@ -6,6 +6,10 @@ export const Container = styled.nav`
   justify-content: space-between;
   padding-bottom: 2.8rem;
   border-bottom: 1px solid #e4e9f2;
+
+  @media screen and (max-width: 30em) {
+    padding: 1rem 1rem;
+  }
 `;
 
 export const Hamburger = styled.div`
@@ -25,9 +29,17 @@ export const LogoMenuBox = styled.div`
   @media screen and (max-width: 52.5em) {
     gap: 3rem;
   }
+
+  @media screen and (max-width: 25.6em) {
+    gap: 2rem;
+  }
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  @media screen and (max-width: 30em) {
+    width: 13rem;
+  }
+`;
 
 export const Menu = styled.ul`
   list-style: none;
@@ -58,6 +70,10 @@ export const IconsBox = styled.div`
   align-items: center;
   gap: 4.5rem;
   position: relative;
+
+  @media screen and (max-width: 25.6em) {
+    gap: 2rem;
+  }
 `;
 
 export const Notification = styled.span`

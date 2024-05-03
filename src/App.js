@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 75em) {
     padding: 2rem;
   }
+
+  @media screen and (max-width: 30em) {
+    padding: 1rem;
+  }
 `;
 
 export const MainContainer = styled.main`
@@ -29,10 +33,10 @@ export const MainContainer = styled.main`
 
   @media screen and (max-width: 52em) {
     flex-direction: column;
-    padding: 7rem 2rem 3rem 2rem;
+    padding: 5rem 2rem 3rem 2rem;
   }
 
   @media screen and (max-width: 30em) {
-    padding: 3rem 2rem 3rem 2rem;
+    padding: 2rem 0rem 3rem 0rem;
   }
 `;

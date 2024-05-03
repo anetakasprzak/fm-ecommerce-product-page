@@ -17,6 +17,7 @@ export const Icon = styled.button`
 `;
 
 export const CartBox = styled.div`
+  z-index: 100;
   min-height: 25.6rem;
   width: 36rem;
   padding: 2.4rem;
