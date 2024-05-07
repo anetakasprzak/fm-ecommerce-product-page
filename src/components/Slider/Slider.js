@@ -55,10 +55,6 @@ export const MainImgContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 52.5em) {
-    pointer-events: none;
-  }
-
   @media screen and (max-width: 27.8em) {
     img {
       height: 32rem;

@@ -23,7 +23,7 @@ function App() {
 
         <ProductDetails setQuantity={setQuantity} />
       </MainContainer>
-      {isModalOpen && (
+      {isModalOpen && !isMobile && (
         <Modal setIsModalOpen={setIsModalOpen}>
           <Slider isInModal />
         </Modal>
