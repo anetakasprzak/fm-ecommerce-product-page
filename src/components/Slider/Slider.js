@@ -13,6 +13,10 @@ export const ThumbnailWrapper = styled.div`
   display: flex;
   gap: 3rem;
   max-width: 44rem;
+
+  @media screen and (max-width: 30em) {
+    display: none;
+  }
 `;
 
 export const MainImg = styled.img`
