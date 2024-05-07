@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   Button,
   CartBox,
@@ -15,9 +15,16 @@ import {
   Sum,
   TextBox,
 } from "./Cart";
+import { useClickAway } from "react-use";
 
 function Cart({ quantity, setQuantity }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const ref = useRef(null);
+
+  useClickAway(ref, () => {
+    setIsOpen(false);
+  });
 
   const calculateSum = (nrOfItems) => {
     const sum = nrOfItems * 125;
@@ -29,7 +36,7 @@ function Cart({ quantity, setQuantity }) {
   };
 
   return (
-    <>
+    <div ref={ref}>
       <Icon onClick={() => setIsOpen(!isOpen)}>
         <svg
           width="22"
@@ -87,7 +94,7 @@ function Cart({ quantity, setQuantity }) {
           )}
         </CartBox>
       )}
-    </>
+    </div>
   );
 }
 
