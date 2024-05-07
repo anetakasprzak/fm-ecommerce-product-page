@@ -119,7 +119,7 @@ export const SideMenu = styled.ul`
   height: 100vh;
   z-index: 6;
   transform: ${(props) =>
-    props.isVisible ? "translateX(0px)" : "translateX(-429px)"};
+    props.isVisible ? "translateX(0px)" : "translateX(-100%)"};
   transition: all 0.2s ease-out;
 
   li {

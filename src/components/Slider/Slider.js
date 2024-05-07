@@ -55,6 +55,10 @@ export const MainImgContainer = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 52.5em) {
+    pointer-events: none;
+  }
+
   @media screen and (max-width: 27.8em) {
     img {
       height: 32rem;
@@ -65,7 +69,7 @@ export const MainImgContainer = styled.div`
 
 export const Left = styled.button`
   position: absolute;
-  left: -5%;
+  left: ${(props) => (props.isMobile ? "2%" : "-5%")};
 
   border: none;
   width: 5.6rem;
@@ -86,7 +90,7 @@ export const Left = styled.button`
 
 export const Right = styled.button`
   position: absolute;
-  right: -5%;
+  right: ${(props) => (props.isMobile ? "2%" : "-5%")};
 
   border: none;
   width: 5.6rem;

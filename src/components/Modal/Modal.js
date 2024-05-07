@@ -25,7 +25,7 @@ export const CloseModal = styled.button`
   cursor: pointer;
 
   position: absolute;
-  top: -1rem;
+  top: -3.5rem;
   right: 0;
 
   svg {

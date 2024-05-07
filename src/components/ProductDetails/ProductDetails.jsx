@@ -29,8 +29,6 @@ function ProductDetails({ setQuantity }) {
     setItemsNumber((itemsNumber) => itemsNumber + 1);
   };
 
-  console.log({ itemsNumber });
-
   return (
     <Container>
       <Subheading>Sneaker Company</Subheading>

@@ -33,7 +33,7 @@ const data = [
   },
 ];
 
-function Slider({ isInModal, setIsModalOpen }) {
+function Slider({ isInModal, isMobile, setIsModalOpen }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const checkNumber = (newIndex) => {
@@ -64,8 +64,8 @@ function Slider({ isInModal, setIsModalOpen }) {
   return (
     <Container isInModal={isInModal}>
       <MainImgContainer>
-        {isInModal && (
-          <Left onClick={prevImage}>
+        {(isInModal || isMobile) && (
+          <Left onClick={prevImage} isMobile={isMobile}>
             <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11 1 3 9l8 8"
@@ -84,8 +84,8 @@ function Slider({ isInModal, setIsModalOpen }) {
           onClick={() => setIsModalOpen(true)}
         />
 
-        {isInModal && (
-          <Right onClick={nextImage}>
+        {(isInModal || isMobile) && (
+          <Right onClick={nextImage} isMobile={isMobile}>
             <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="m2 1 8 8-8 8"
