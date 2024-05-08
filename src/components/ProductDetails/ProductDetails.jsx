@@ -49,11 +49,11 @@ function ProductDetails({ setQuantity }) {
       <AddToCartBox>
         <QuantityBox>
           <ButtonLess onClick={lessQuantity}>
-            <img src="../../../public/images/icon-minus.svg" />
+            <img src="./images/icon-minus.svg" />
           </ButtonLess>
           <Quantity>{itemsNumber}</Quantity>
           <ButtonMore onClick={moreQuantity}>
-            <img src="../../../public/images/icon-plus.svg" />
+            <img src="./images/icon-plus.svg" />
           </ButtonMore>
         </QuantityBox>
         <ButtonAdd onClick={() => setQuantity(itemsNumber)}>

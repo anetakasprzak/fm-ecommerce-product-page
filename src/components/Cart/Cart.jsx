@@ -60,7 +60,7 @@ function Cart({ quantity, setQuantity }) {
               <ItemBox>
                 <Image>
                   <img
-                    src="../../../public/images/image-product-1-thumbnail.jpg"
+                    src="./images/image-product-1-thumbnail.jpg"
                     alt="product image"
                   />
                 </Image>

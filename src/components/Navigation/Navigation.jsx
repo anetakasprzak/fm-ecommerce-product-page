@@ -22,7 +22,7 @@ function Navigation({ quantity, setQuantity }) {
     <Container>
       <LogoMenuBox>
         <Hamburger onClick={() => setIsVisible(true)}>
-          <img src="../../../public/images/icon-menu.svg" />
+          <img src="./images/icon-menu.svg" />
         </Hamburger>
         <Logo src="./images/logo.svg" alt="Logo" />
         <Menu>
