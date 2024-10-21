@@ -21,7 +21,7 @@ function App() {
           isMobile={isMobile}
         />
 
-        <ProductDetails setQuantity={setQuantity} />
+        <ProductDetails setQuantity={setQuantity} quantity={quantity} />
       </MainContainer>
       {isModalOpen && !isMobile && (
         <Modal setIsModalOpen={setIsModalOpen}>

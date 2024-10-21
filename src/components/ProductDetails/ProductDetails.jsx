@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Container,
   Subheading,
@@ -17,8 +17,8 @@ import {
   ButtonAdd,
 } from "./ProductDetails";
 
-function ProductDetails({ setQuantity }) {
-  const [itemsNumber, setItemsNumber] = useState(0);
+function ProductDetails({ setQuantity, quantity }) {
+  const [itemsNumber, setItemsNumber] = useState(quantity);
 
   const lessQuantity = () => {
     if (itemsNumber === 0) return;
@@ -28,6 +28,10 @@ function ProductDetails({ setQuantity }) {
   const moreQuantity = () => {
     setItemsNumber((itemsNumber) => itemsNumber + 1);
   };
+
+  useEffect(() => {
+    setItemsNumber(quantity);
+  }, [quantity]);
 
   return (
     <Container>
