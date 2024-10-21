@@ -4,6 +4,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2.8rem;
+  z-index: 2;
 
   @media screen and (max-width: 64em) {
     max-width: 40rem;

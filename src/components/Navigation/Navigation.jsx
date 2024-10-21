@@ -13,10 +13,18 @@ import {
   Overlay,
 } from "./Navigation";
 import Cart from "../Cart/Cart.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navigation({ quantity, setQuantity }) {
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (isVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isVisible]);
 
   return (
     <Container>

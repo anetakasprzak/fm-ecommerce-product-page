@@ -8,7 +8,7 @@ export const Overlay = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(3px);
-  z-index: 5;
+  z-index: 999;
 `;
 
 export const Content = styled.div`
